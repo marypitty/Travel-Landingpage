@@ -1,0 +1,120 @@
+body {
+    background: linear-gradient(30deg, rgb(77, 77, 77), rgb(58, 58, 58));
+    color: rgb(68, 68, 68);
+}
+
+#page-logo a {
+    color: rgb(183, 230, 235);
+}
+
+@media (max-width: 30rem) {
+    header a {
+        font-size: 0.5rem;
+        padding: 0.5rem;
+    }
+}
+
+header {
+    position: static;
+}
+
+header a {
+    color: rgb(183, 230, 235);
+}
+
+header nav a:hover {
+    background-color: rgb(183, 230, 235);
+    color: rgb(59, 59, 59);
+}
+
+main ul {
+    width: 75rem;
+    margin: 0 auto 3px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.3rem 1.3rem;
+}
+
+li:nth-of-type(3) {
+    grid-column: 1/3;
+}
+
+main li {
+    display: flex;
+    background-color: white;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+main li img {
+    width: 19rem;
+    height: 19rem;
+    object-fit: cover;
+}
+
+.item-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media (max-width: 30rem) {
+    main ul {
+        display: block;
+        width: 22rem;
+        margin: 0;
+    }
+    main li {
+        display: block;
+        margin: 1rem;
+    }
+    main li img {
+        width: 26rem;
+        height: 15rem;
+    }
+    .item-content {
+        padding: 0.5;
+    }
+    .item-content h2,
+    p {
+        font-size: 1rem;
+    }
+}
+
+.actions {
+    text-align: right;
+}
+
+.actions a {
+    text-decoration: none;
+    padding: 0.4rem;
+    color: rgb(22, 211, 228);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.actions a:hover {
+    background-color: rgb(235, 253, 255);
+}
+
+
+/* Burger Button */
+
+.menu-btn span {
+    width: 100%;
+    height: 3px;
+    background-color: rgb(22, 211, 228);
+}
+
+
+/* Side drawer */
+
+#side-drawer {
+    display: none;
+}
+
+#side-drawer:target {
+    display: block;
+}
